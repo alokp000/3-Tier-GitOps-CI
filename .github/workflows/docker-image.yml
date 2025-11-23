@@ -121,8 +121,8 @@ jobs:
           file: ./client/Dockerfile
           push: true
           tags: |
-            adijaiswal/frontend:latest
-            adijaiswal/frontend:${{ env.IMAGE_TAG }}
+            pandaalok000/frontend:latest
+            pandaalok000/frontend:${{ env.IMAGE_TAG }}
 
   trivy_image_scan:
     runs-on: ubuntu-latest
@@ -162,7 +162,7 @@ jobs:
       - name: Checkout CD repo
         uses: actions/checkout@v4
         with:
-          repository: jaiswaladi246/3-Tier-GitOps-CD
+          repository: alokp000/3-Tier-GitOps-CD
           ref: main
           token: ${{ secrets.CD_REPO_TOKEN }}
           path: cd
