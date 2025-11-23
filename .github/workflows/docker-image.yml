@@ -92,8 +92,8 @@ jobs:
           file: ./api/Dockerfile
           push: true
           tags: |
-            adijaiswal/backend:latest
-            adijaiswal/backend:${{ env.IMAGE_TAG }}
+            pandaalok000/backend:latest
+            pandaalok000/backend:${{ env.IMAGE_TAG }}
 
   build_frontend_docker_image_and_push:
     runs-on: ubuntu-latest
@@ -137,7 +137,7 @@ jobs:
         uses: aquasecurity/trivy-action@0.28.0
         with:
           scan-type: image
-          image-ref: adijaiswal/backend:${{ env.IMAGE_TAG }}
+          image-ref: pandaalok000/backend:${{ env.IMAGE_TAG }}
           format: table
           exit-code: '0'                 # set to '1' to fail on vulns
           ignore-unfixed: true
@@ -148,7 +148,7 @@ jobs:
         uses: aquasecurity/trivy-action@0.28.0
         with:
           scan-type: image
-          image-ref: adijaiswal/frontend:${{ env.IMAGE_TAG }}
+          image-ref: pandaalok000/frontend:${{ env.IMAGE_TAG }}
           format: table
           exit-code: '0'
           ignore-unfixed: true
